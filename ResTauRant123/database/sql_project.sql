@@ -89,14 +89,14 @@ select * from employees;
 -- table for user:
 -- -----------------------------
 create table if not exists users(
-id_user int primary key,
+	id_user int primary key,
     fullname varchar(60),
     user_name varchar(255),
     password char(11),
     gender char(5),
     email varchar(50),
     phone char(11),
-    role int(11) not null default '0',
+    status int(11) not null default '0',
     address varchar(100)
 );
 
@@ -110,7 +110,7 @@ select * from users;
 -- table for carts:
 -- -----------------------------
 create table if not exists carts(
-id_cart int auto_increment primary key,
+	id_cart int auto_increment primary key,
     name_product varchar(255) not null,
     price decimal(10,2) not null,
     payments varchar(50), -- cột hình thức thanh toán
@@ -127,28 +127,31 @@ id_cart int auto_increment primary key,
 -- -----------------------------
 -- table for carts:
 -- -----------------------------
--- Tạo bảng danh mục sản phẩm( thể loại chính cho từng sản phẩm)
-create table if not exists Product_category(
-id_prodCate int auto_increment primary key,
-    product_Category_Name varchar(100)
-);
-insert into Product_category values (1,'New Product'),
-(2,'Drinks'),
-(3,'Product Discount'),
-                                    (4,'Room');
+
 -- Tạo bảng nhà cung cấp
-create table if not exists Suppliers(
-id_supplier int primary key,
-    name_supplier varchar(100),
+create table Vendor(
+id_vendor int primary key,
+    name_vendor varchar(100),
     address   varchar(100),
     phone char(11),
     email varchar(100)
 );
-insert into Suppliers value(500,'ABCD','33-HungVuong-HaNoi',012345,'abcd@gmail.com.vn'),
-(550,'CDEFH','Ho Chi Minh',012367,'cdefh@gmail.com.vn'),
-(600,'HFQXZ','Da Nang',012389,'hfqxz@gmail.com.vn'),
-(700,'HDTHC','Quang Binh',19008198,'hdthc@gmail.com.vn');
+insert into Vendor value(1,'ABCD','33-HungVuong-HaNoi',012345,'abcd@gmail.com.vn'),
+(2,'CDEFH','Ho Chi Minh',012367,'cdefh@gmail.com.vn'),
+(3,'HFQXZ','Da Nang',012389,'hfqxz@gmail.com.vn'),
+(4,'HDTHC','Quang Binh',19008198,'hdthc@gmail.com.vn');
 
+-- Tạo bảng danh mục sản phẩm( thể loại chính cho từng sản phẩm)
+create table Product_category(
+	id_prodCate int primary key,
+    id_cart int,
+    product_Category_Name varchar(100),
+    foreign key (id_cart) references carts(id_cart)
+);
+insert into Product_category values (1,'New Product'),
+(2,'Drinks'),
+(3,'Product Discount'),
+(4,'Room');
 -- -----------------------------
 -- table for products:
 -- -----------------------------
@@ -196,7 +199,7 @@ category_id int(11) NOT NULL,
 image varchar(255) COLLATE utf8_unicode_ci NOT NULL,
 description text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
 price float NOT NULL,
-    old_price float not null,
+old_price float not null,
 created_day date NOT NULL,
 quantity int(11) NOT NULL,
 -- keyword varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -208,12 +211,12 @@ FOREIGN KEY (category_id) REFERENCES Product_category(id_prodCate)
 -- drop table discount_product;
 
 insert into discount_product values
-(1010,'Ba Ba',1,'img/img-product/baba.jpg','',120000,100000,'2020-1-21',20,1),
-(1011,'Ga Luoc',1,'img/img-product/galuoc.png','',200000,150000,'2020-03-05',23,1),
-(1012,'Cua Hoang De',1,'img/img-product/cuahoangde.jpg','',200000,150000,'2020-03-05',23,1),
-(1013,'Ca Mú Hấp',1,'img/img-product/camuhap.jpg','',1000000,700000,'2020-05-11',20,1),
-(1014,'Cá',2,'img/img-product/honhop.jpg','',200000,100000,'2020-05-12',20,1),
-(1015,'Ga Nuong',1,'img/img-product/ganuong.jpg','',600000,500000,'2020-05-14',40,1);
+(1010,'Ba Ba',1,'img/img-product/baba.jpg','',120000,100000,'2020-1-21',20,3),
+(1011,'Ga Luoc',1,'img/img-product/galuoc.png','',200000,150000,'2020-03-05',23,3),
+(1012,'Cua Hoang De',1,'img/img-product/cuahoangde.jpg','',200000,150000,'2020-03-05',23,3),
+(1013,'Ca Mú Hấp',1,'img/img-product/camuhap.jpg','',1000000,700000,'2020-05-11',20,3),
+(1014,'Cá',2,'img/img-product/honhop.jpg','',200000,100000,'2020-05-12',20,3),
+(1015,'Ga Nuong',1,'img/img-product/ganuong.jpg','',600000,500000,'2020-05-14',40,3);
 
 
 
@@ -242,7 +245,6 @@ INSERT INTO rooms values (1,'room',4,'img/img-room/room1.jpg','',100000,'2020-1-
                             (6,'room5',4,'img/img-room/room6.jpg','',100000,'2020-1-21',20,20);
 
 select * from rooms;
-
 
 
 CREATE TABLE if not exists room_interface(
@@ -501,4 +503,4 @@ select * from room_interface;
 -- DROP INDEX name_shipper;
 
 -- CREATE FULLTEXT INDEX index_shippers ON shippers(name_shipper);
--- Select * from shippers where match(name_shipper) against("Chu" in natural language mode);
+-- Select * from shippers where match(name_shipper) against("Chu" in natural language mode);  .

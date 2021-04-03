@@ -25,6 +25,10 @@
     font-style: normal;
 }
 
+#map {
+    height: 100%;
+}
+
 body {
     color: #686868;
     font-size: 14px;

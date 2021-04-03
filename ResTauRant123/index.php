@@ -35,7 +35,6 @@
     <!-- Modernizer -->
     <script src="js/modernizer.js"></script>
 
-
 </head>
 
 <body>
@@ -209,6 +208,7 @@
                             
                             <!-- Tab pen product  -->
                             <div>
+
                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
                                     <div class="offer-item">
                                         <img src="images/menu-item-thumbnail-01.jpg" alt="" class="img-responsive">
@@ -414,23 +414,13 @@
                                     </div>
                                 </div>                              
                             </div>
-                            <?php } ?>
-                            <!-- end col -->
-                              
+                            <?php } ?>                           
                         </div>
-                        <!-- end row -->
-
                     </div>
-                    <!-- end team-box -->
-
                 </div>
-                <!-- end col -->
             </div>
-            <!-- end row -->
         </div>
-        <!-- end container -->
     </div>
-    <!-- end team-main -->
 
     <div id="product" class="gallery-main pad-top-100 pad-bottom-100">
         <div class="container">
@@ -585,7 +575,7 @@
                             <!-- end col -->
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-box">
-                                <input type="text" name="no_of_persons" id="no_of_persons" placeholder="Date" required="required"  />
+                                <input type="number" name="no_of_persons" id="no_of_persons" placeholder="no.Of person" required="required"  />
                                  
                                 </div>
                             </div>
@@ -652,11 +642,8 @@
                             <a href="#" class="orange-btn"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></a>
                         </form>
                     </div>
-                    <!-- end col -->
                 </div>
-                <!-- end row -->
             </div>
-            <!-- end container -->
         </div>
         
         <br><br>
@@ -704,7 +691,6 @@
                                 </ul>
 
                             </div>
-                            <!-- end footer-box-a -->
                         </div>
                         <div class="col-lg-4 col-md-3 col-sm-6 col-xs-12">
                             <div class="footer-box-c">
@@ -724,9 +710,7 @@
                                     <span><a href="#">amthucvietnamcusine@gmail.com</a></span>
                                 </p>
                             </div>
-                            <!-- end footer-box-c -->
                         </div>
-                        <!-- end col -->
                         <div class="col-lg-4 col-md-3 col-sm-6 col-xs-12">
                             <div class="footer-box-d">
                                 <h3>Opening Hours</h3>
@@ -743,6 +727,7 @@
                                 </ul>
                             </div>
                         </div>
+                       
                     </div>
                 </div>
             </div>
