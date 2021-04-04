@@ -144,9 +144,9 @@ insert into Vendor value(1,'ABCD','33-HungVuong-HaNoi',012345,'abcd@gmail.com.vn
 -- Tạo bảng danh mục sản phẩm( thể loại chính cho từng sản phẩm)
 create table Product_category(
 	id_prodCate int primary key,
-    id_cart int,
-    product_Category_Name varchar(100),
-    foreign key (id_cart) references carts(id_cart)
+   --  id_cart int,
+    product_Category_Name varchar(100)
+   --  foreign key (id_cart) references carts(id_cart)
 );
 insert into Product_category values (1,'New Product'),
 (2,'Drinks'),
@@ -189,6 +189,7 @@ insert into products values
 select *from Products;
 
 
+
 -- -----------------------------
 -- table for products:
 -- -----------------------------
@@ -218,6 +219,41 @@ insert into discount_product values
 (1014,'Cá',2,'img/img-product/honhop.jpg','',200000,100000,'2020-05-12',20,3),
 (1015,'Ga Nuong',1,'img/img-product/ganuong.jpg','',600000,500000,'2020-05-14',40,3);
 
+ create table if not exists drinks(
+id int(11) NOT NULL AUTO_INCREMENT,
+name_water varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+category_id int(11) NOT NULL,
+image_water varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+description text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+price float NOT NULL,
+status int(11) DEFAULT NULL,
+PRIMARY KEY (id),
+FOREIGN KEY (category_id) REFERENCES Product_category(id_prodCate)
+ );
+
+INSERT INTO drinks values 	(1,'Red Bull',2,'img/drink/Bò-húc.jpg','',200000,0),
+							(2,'CocaCoLa',2,'img/drink/coca.jpg','',200000,0),
+                            (3,'Beer',2,'img/drink/beer.jpg','',200000,0),
+                            (4,'Milk-tea',2,'img/drink/gong-cha.jpg','',200000,0),
+                            (5,'Bí đao',2,'img/drink/milk-tea.jpg','',200000,0),
+                            (6,'KHông Độ',2,'img/drink/không-độ.jpg','',200000,0);
+
+create table if not exists wedding_img(
+id int(11) NOT NULL AUTO_INCREMENT,
+name varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+category_id int(11) NOT NULL,
+image varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+description text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+price float NOT NULL,
+status int(11) DEFAULT NULL,
+PRIMARY KEY (id),
+FOREIGN KEY (category_id) REFERENCES Product_category(id_prodCate)
+ );
+
+INSERT INTO wedding_img values 	(1,'Tôm Nướng',2,'img/wedding/tom.jpg','',200000,0),
+							(2,'Fruit',2,'img/wedding/fruit.jpg','',200000,0),
+                            (3,'Mâm Cưới',2,'img/wedding/mâm.jpg','',200000,0);
+                            
 
 
 -- -----------------------------
@@ -235,7 +271,7 @@ created_day date NOT NULL,
 quantity_person int(11) NOT NULL,
 status int(11) DEFAULT NULL,
 PRIMARY KEY (id),
-FOREIGN KEY (category_id) REFERENCES categories(id)
+FOREIGN KEY (category_id) REFERENCES Product_category(id_prodCate 	)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=34;
 INSERT INTO rooms values (1,'room',4,'img/img-room/room1.jpg','',100000,'2020-1-21',20,20),
 (2,'room1',4,'img/img-room/room2.jpg','',100000,'2020-1-21',20,20),

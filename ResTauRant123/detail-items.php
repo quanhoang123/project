@@ -91,7 +91,7 @@
                 <div class="banner-static">
                     <div class="banner-text">
                         <div class="banner-cell">
-                            <h1>Eat with <span class="typer" id="some-id" data-delay="200" data-delim=":" data-words="GROUP_RESTAURANT:Family:" data-colors="yellow"></span><span class="cursor" data-cursorDisplay="_" data-owner="some-id"></span></h1>
+                            <h1>Eat with <span class="typer" id="some-id" data-delay="200" data-delim=":" data-words="GROUP_RESTAURANT NHÉ:Family:" data-colors="black"></span><span class="cursor" data-cursorDisplay="_" data-owner="some-id"></span></h1>
                             <h2>Restaurant </h2>
                             <p>Hãy tin tưởng lựa chọn điểm đến mỗi ngày để có một bữa ăn ấm áp nhé</p>
                             <div class="book-btn">
@@ -212,15 +212,15 @@
                     <div class="tab-menu">
                         <div class="slider slider-nav">
                             <div class="tab-title-menu">
-                                <h2>EVENT</h2>
+                                <h2>Break Fast</h2>
                                 <p> <i class="flaticon-canape"></i> </p>
                             </div>
                             <div class="tab-title-menu">
-                                <h2>BIRTDHDAY</h2>
+                                <h2>Lunch</h2>
                                 <p> <i class="flaticon-dinner"></i> </p>
                             </div>
                             <div class="tab-title-menu">
-                                <h2>WEDDING</h2>
+                                <h2>Dinner</h2>
                                 <p> <i class="flaticon-desert"></i> </p>
                             </div>
                             <div class="tab-title-menu">
@@ -420,24 +420,6 @@
                                     <img src="<?php echo $room['image_room']?>" alt=""  />
                                 </a>
                         
-                                <div class="modal fade" id="2" tabindex="-1" role="dialog">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                            <div class="modal-body">
-                                                <img src="<?php echo $room['image_room']?>" alt="" width="100px" height="100px;  "/>
-                                            </div>
-                                            <div class="col-md-12 description">
-                                                <h4><?php echo $room['name_room'] ?><span style="float:right"><?php echo $room['price'] ?></span></h4>                                                                                      
-                                            </div>
-                                            <div class="modal-footer foot" style="float:left">
-                                                <button href=""><i class="fa fa-shopping-cart"></i></button>
-                                                <button href=""><i class="fa fa-heart"></i></button>   
-                                            </div>
-                                        </div>
-                                       
-                                    </div>
-                                </div>
                             </div>
                         </div>
                         <?php } ?>                        

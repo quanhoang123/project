@@ -19,7 +19,7 @@
 @import url(normalize.css);
 @import url(animate.min.css);
 @font-face {
-    font-family: 'nautilus_pompiliusregular';
+    font-family: 'Helvetica';
     src: url('../fonts/nautilus-webfont.woff2') format('woff2'), url('../fonts/nautilus-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
@@ -275,7 +275,7 @@ body {
 .main-menu nav li a {
     padding: 43px 0px 15px;
     margin: 0 14px;
-    color: #fff;
+    color: #0000;
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
     letter-spacing: 1.6px;
@@ -382,14 +382,14 @@ body {
     text-align: center;
 }
 
-.banner-cell {
+.banner-cel {
     display: table-cell;
     vertical-align: middle;
     color: #fff;
 }
 
 .banner-text h1 {
-    font-family: 'nautilus_pompiliusregular';
+    font-family: 'Helvetica';
     letter-spacing: 2.7px;
     position: relative;
     display: inline-block;
@@ -401,7 +401,7 @@ body {
 }
 
 .banner-text h2 {
-    font-family: 'nautilus_pompiliusregular';
+    font-family: 'Helvetica';
     letter-spacing: 2.7px;
     position: relative;
     font-size: 37px;
@@ -451,7 +451,7 @@ body {
     left: 50%;
     right: 50%;
     bottom: 0;
-    background: red;
+    background: yellow;
     height: 2px;
     -webkit-transition-property: left, right;
     transition-property: left, right;
@@ -468,40 +468,7 @@ body {
     right: 0;
 }
 
-.banner-cell .mouse {
-    position: relative;
-    width: calc(16px * 2);
-    height: calc(31px * 2);
-    margin: 60px auto 20px;
-    background: none;
-    border: 2px solid white;
-    border-radius: calc(16px * 2);
-    z-index: 1;
-}
 
-.banner-cell .mouse:after {
-    display: block;
-    content: "";
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    width: calc(4px * 2);
-    height: calc(4px * 2);
-    background: none;
-    border: 2px solid white;
-    border-radius: 100%;
-    -webkit-animation-name: scrollWheel;
-    animation-name: scrollWheel;
-    -webkit-animation-duration: 1.4s;
-    animation-duration: 1.4s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-timing-function: ease;
-    animation-timing-function: ease;
-    will-change: transform;
-}
 
 @-webkit-keyframes scrollWheel {
     from {
@@ -596,7 +563,7 @@ body {
 
 .block-title {
     font-size: 52px;
-    font-family: 'nautilus_pompiliusregular';
+    font-family: 'Helvetica';
     font-weight: bold;
 }
 
@@ -867,7 +834,7 @@ body {
     -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
     color: #000;
-    font-size: 26px;
+    font-size: 16px;
     font-family: 'Roboto', sans-serif;
     text-align: center;
     letter-spacing: .5px;
@@ -876,7 +843,7 @@ body {
 .offer-item div h3 {
     font-size: 20px;
     margin: 9px 0 0px;
-    font-family: 'nautilus_pompiliusregular';
+    font-family: 'Helvetica';
     font-weight: 400;
     letter-spacing: .5px;
 }
@@ -981,7 +948,7 @@ body {
 }
 
 .text-col h3 {
-    font-family: 'nautilus_pompiliusregular';
+    font-family: 'Helvetica';
     font-size: 28px;
 }
 
@@ -1043,7 +1010,7 @@ body {
 
 
 /*------------------------------------------------------------------
-    GALLERY AREA
+    Sản phẩm AREA
 -------------------------------------------------------------------*/
 
 .gallery-main .title-caption {
@@ -1080,7 +1047,7 @@ body {
 
 .gal-item a:after {
     content: "\e003";
-    font-family: 'Glyphicons Halflings';
+    font-family: 'Helvetica';
     opacity: 0;
     background-color: rgba(231, 91, 30, 0.75);
     position: absolute;
@@ -1101,6 +1068,8 @@ body {
     opacity: 1;
 }
 
+/* hiện thị modal chi tiết sản phẩm */
+
 .modal-open .gal-container .modal {
     background-color: rgba(0, 0, 0, 0.4);
 }
@@ -1112,14 +1081,14 @@ body {
 .modal-open .gal-item button.close {
     position: absolute;
     width: 25px;
-    height: 25px;
+    height: 20px;
     background-color: #000;
     opacity: 1;
     color: #fff;
     z-index: 999;
     right: -12px;
     top: -12px;
-    border-radius: 50%;
+    border-radius: 10%;
     font-size: 15px;
     border: 2px solid #fff;
     line-height: 25px;
@@ -1139,7 +1108,7 @@ body {
 }
 
 .gal-container .modal-dialogue {
-    width: 80%;
+    width: 50%;
 }
 
 .gal-container .description {
@@ -1186,6 +1155,7 @@ body {
     transform: translate3d(0, -100px, 0);
     opacity: 1;
 }
+
 
 
 /*------------------------------------------------------------------
@@ -1491,7 +1461,7 @@ select:focus,
 .ft-title {
     letter-spacing: 0.96px;
     margin-bottom: 22px;
-    font-family: 'nautilus_pompiliusregular';
+    font-family: 'Helvetica';
     font-size: 52px;
 }
 
@@ -1614,7 +1584,7 @@ select:focus,
 
 .footer-box-a h3 {
     font-size: 24px;
-    font-family: 'nautilus_pompiliusregular';
+    font-family: 'Helvetica';
 }
 
 .footer-box-a p {
@@ -1626,7 +1596,7 @@ select:focus,
 
 .footer-box-b h3 {
     font-size: 24px;
-    font-family: 'nautilus_pompiliusregular';
+    font-family: 'Helvetica';
 }
 
 .footer-box-b p {
@@ -1649,7 +1619,7 @@ select:focus,
 
 .footer-box-c h3 {
     font-size: 24px;
-    font-family: 'nautilus_pompiliusregular';
+    font-family: 'Helvetica';
 }
 
 .footer-box-c p {
@@ -1679,7 +1649,7 @@ select:focus,
 
 .footer-box-d h3 {
     font-size: 24px;
-    font-family: 'nautilus_pompiliusregular';
+    font-family: 'Helvetica';
 }
 
 .footer-box-d p {
@@ -1709,104 +1679,88 @@ select:focus,
     color: #666;
 }
 
-
-/*------------------------------------------------------------------
-    COLOR  Change
--------------------------------------------------------------------*/
+/**********************************/
 
 
-/*--- color switcher ---*/
+/********* Bottom Bar CSS *********/
 
-#color-panel {
-    position: fixed;
-    width: 180px;
-    height: auto;
-    top: 150px;
-    /*min-height: 200px;*/
-    text-align: left;
-    border: 1px solid rgba(100, 100, 100, 0.55);
-    z-index: 11;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    transition: all 0.5s;
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.45);
+
+/**********************************/
+
+.bottom-bar {
+    padding: 15px 0;
+    background: #ffffff;
+    margin-bottom: 30px;
 }
 
-.close-color-panel {
-    right: -180px;
-}
-
-.open-color-panel {
-    right: -1px;
-}
-
-#color-panel .segment {
+.bottom-bar .search input[type=text] {
     width: 100%;
-    padding: 15px 10px 15px 0;
-    border: 1px solid rgba(100, 100, 100, 0.55);
-    padding: 15px 25px;
-    background: rgba(50, 50, 50, 0.95);
+    height: 40px;
+    padding: 0 15px;
+    color: #666666;
+    border: 1px solid #FF6F61;
+    border-radius: 4px;
 }
 
-#color-panel a.panel-button {
+.bottom-bar .search button {
     position: absolute;
-    width: 50px;
-    height: 50px;
-    left: -50px;
-    top: 30px;
-    text-align: center;
-    font-size: 18px;
-    line-height: 47px;
-    cursor: pointer;
+    width: 40px;
+    height: 38px;
+    top: 1px;
+    right: 16px;
+    padding: 0 15px;
     border: none;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    color: #d1d1d1;
-    background: rgba(100, 100, 100, 0.85);
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
+    background: none;
+    color: #FF6F61;
+    border-radius: 0 2px 2px 0;
 }
 
-#color-panel a.panel-button i {
-    padding: 7px;
-}
-
-#color-panel a.panel-button:hover {
-    color: #35cc75;
-}
-
-#color-panel h4 {
-    margin: 3px auto 15px;
-    padding-top: 0;
-    padding-bottom: 0;
+.bottom-bar .search button:hover {
+    background: #FF6F61;
     color: #ffffff;
 }
 
-#color-panel .segment a.switcher {
-    width: 24px;
-    height: 35px;
-    display: inline-block;
-    margin-right: 3px;
-    margin-top: 5px;
-    border: 1px solid #efefef;
-    cursor: pointer;
+.user {
+    font-size: 0;
+    text-align: right;
 }
 
-.orange-bg {
-    background: #e75b1e;
+.user .wishlist {
+    margin-right: 15px;
 }
 
-.strong-blue-bg {
-    background: #1E69B8;
+.user .cart i,
+.user .wishlist i {
+    color: #FF6F61;
 }
 
-.moderate-green-bg {
-    background: #8dc63f;
+.user .cart span,
+.user .wishlist span {
+    color: #FF6F61;
+    font-size: 15px;
 }
 
-.vivid-yellow-bg {
-    background: #fdcb03;
+.user .cart:hover i,
+.user .wishlist:hover i,
+.user .cart:hover span,
+ .user .wishlist:hover span {
+    color: #ffffff;
+}
+
+@media (min-width: 768px) {
+    .bottom-bar {
+        max-height: 90px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .bottom-bar .logo,
+    .bottom-bar .search,
+    .bottom-bar .user {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .bottom-bar .user {
+        margin-bottom: 0;
+    }
 }
